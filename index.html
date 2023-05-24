@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <buton onclick= "alert('✔✔✔✔')" style="
+      background-color: yellow;
+      border: 2px solid;
+      cursor: pointer;
+      "> ✔✔✔✔✔</buton>
+      <h2>Cart Quantity</h2>
+      <button onclick="
+        console.log(`Cart quantity: ${cartQuantity}`);
+      " class="cartbutton">Show Quantity</button>
+      <button onclick="
+        cartQuantity++;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      " class="cartbutton">Add to Cart</button>
+      <button onclick="
+        cartQuantity +=2;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      " class="cartbutton">+2</button>
+      <button onclick="
+        cartQuantity +=3;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      " class="cartbutton">+3</button>
+      <button onclick="
+      cartQuantity +=4;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    " class="cartbutton">+4</button>
+      <button onclick="
+      cartQuantity +=5;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    " class="cartbutton">+5</button>
+      <button onclick="
+        cartQuantity = 0;
+        console.log(`Cart was reset.`);
+        console.log(`Cart quantity: ${cartQuantity}`);
+      " class="cartbutton">Reset Cart</button>
+      <button onclick="
+      if (cartQuantity > 0) {
+      cartQuantity -= 1;
+      console.log(`Cart quantity was removed 1.`);
+      console.log(`Cart quantity: ${cartQuantity}`);
+      }
+      else {
+        cartQuantity = 0;
+        console.log(`Your cart is empty.`);
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    " class="cartbutton">Cart -1</button>
+      <button onclick="
+      if (cartQuantity > 0) {
+      cartQuantity -= 2;
+      console.log(`Cart quantity was removed 2.`);
+      console.log(`Cart quantity: ${cartQuantity}`);
+      }
+      else {
+        cartQuantity = 0;
+        console.log(`Your cart is empty.`);
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    " class="cartbutton">Cart -2</button>
+      <button onclick="
+      if (cartQuantity > 0) {
+      cartQuantity -= 3;
+      console.log(`Cart quantity was removed 3.`);
+      console.log(`Cart quantity: ${cartQuantity}`);
+      }
+      else {
+        cartQuantity = 0;
+        console.log(`Your cart is empty.`);
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    " class="cartbutton">Cart -3</button>
+      <script>
+        let cartQuantity = 0;
+      </script>
+</body>
+</html>
