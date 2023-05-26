@@ -35,6 +35,27 @@
     /*
     On holiday, the park do not give the discount
     */
+    // version 1 👇👇
+    const randomAngka = Math.random();
+    const tebakan = 'heads';
+    let hasil;
+    if (randomAngka < 0.5) {
+      hasil = 'heads';
+    } else {
+      hasil = 'tails';
+    }
+    if (hasil === tebakan) {
+      console.log('You win!');
+    } else {
+      console.log('You lose!');
+    }
+    
+    // version 2 👇👇
+    const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      const guess = 'heads';
+      console.log(guess === result ? 'You win!' : 'You lose!');
   </script>
 </body>
 </html>
