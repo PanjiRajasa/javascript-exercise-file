@@ -90,6 +90,36 @@
     calculateTax(2000);
     *It will get in the value called parameter 1 into the function, we need called parameter at the same time we call the function. So it works same as how variable works....
     */
+
+    function greet(name = 'Panji') {
+      console.log(`🐣🤗🙌✔ ${name}`)
+    };
+    greet('Panji');
+
+    function greet2(name) {
+      if (name === undefined) {
+        console.log('Hi there!')
+      } else {
+        console.log(`🐣🤗🙌✔ ${name}`)
+      }
+    };
+    greet2('Panji2');
+
+    function convertToFahrenheit(celsius) {
+    if (celsius === undefined) {
+      console.log('Please enter a valid value.');
+    } else {
+      let fahrenheit = (celsius * (9/5) + 32);
+    }
+  }
+
+    console.log(convertToFahrenheit(25));
+
+    function convertToFahrenheit(celsius) {
+        return (celsius * 9 / 5) + 32;
+      }
+      console.log(convertToFahrenheit(25));
+
   </script>
 </body>
 </html>
