@@ -46,13 +46,26 @@
       return functionReturnValue + 14;
     };
     console.log(function4());
-
+    // Tax function version 1
     function calculateTax (cost, taxPercent) {
-      console.log(Math.round(cost * taxPercent))
+      if (cost === undefined || taxPercent === undefined) {
+        console.log('Please enter the valid input 🙌')
+      } else {
+        console.log(Math.round(cost * taxPercent))
+      }
     }
     // use sen value
     calculateTax(2000, 0.5);
     calculateTax(2525, 0.3);
+    calculateTax(1);
+
+    // Tax function version 2
+    // This function is use default value for taxPercent parameter 👇👇👍
+    function calculateTax2 (cost, taxPercent = 0.1) {
+        console.log(Math.round(cost * taxPercent))
+      }
+      calculateTax2(2525, 0.3);
+      calculateTax2(1000);
 
     /*
       The different between return & parameter :
