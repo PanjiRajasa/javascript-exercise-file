@@ -10,21 +10,16 @@
 <body>
   <h1>Rock paper scissors game</h1>
   <button onclick="
-    const randomNumber = Math.random();
     // explanation : to make the computer random move we need a Math.random(), and because Math.random() method is display random number between 0 and 1 which means decimal number and the percentages of three moves we want to make it equal, so we assumes the two parts between 0 & 1 is : 0, 1/3, 2/3, 1. and between each number we can insert code which will display the computer move
     // Then we will compare our move with computer move and finally we will display the code that will display the result of the comparison
-
-    const computerMove = pickComputerMove();
     playGame('rock');
 
   ">Rock</button>
   <button onclick="
-    const computerMove = pickComputerMove();
     playGame('paper');
 
   ">Paper</button>
   <button onclick="
-    const computerMove = pickComputerMove();
     playGame('scissors');
 
   ">Scissors</button>
@@ -44,7 +39,7 @@
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. You ${result}`)
     }
 
-    if (playerMove === 'paper') {
+     if (playerMove === 'paper') {
       let result = '';
     if (computerMove === 'rock') {
       result = 'win.'
@@ -57,7 +52,7 @@
     alert(`You picked ${playerMove}. Computer picked ${computerMove}. You ${result}`)
     }
 
-    if (playerMove === 'rock') {
+     if (playerMove === 'rock') {
       let result = '';
     if (computerMove === 'rock') {
       result = 'tie.'
