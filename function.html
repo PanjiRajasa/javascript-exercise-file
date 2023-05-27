@@ -46,6 +46,37 @@
       return functionReturnValue + 14;
     };
     console.log(function4());
+
+    function calculateTax (cost, taxPercent) {
+      console.log(Math.round(cost * taxPercent))
+    }
+    // use sen value
+    calculateTax(2000, 0.5);
+    calculateTax(2525, 0.3);
+
+    /*
+      The different between return & parameter :
+      - return get out the value from function
+      example:
+      function function1() {
+      const angka = 11;
+      const hasil = angka + 1;
+      console.log(hasil);
+
+      return 'return value';
+    };
+    console.log(function1());
+    *It will return the string 'return value' out the function
+
+    - parameter is opposite of return, it will get in the value into function 
+    example:
+    function calculateTax (cost) {
+      console.log(Math.round(cost * 0.1))
+    }
+    // use sen value
+    calculateTax(2000);
+    *It will get in the value called parameter 1 into the function, we need called parameter at the same time we call the function. So it works same as how variable works....
+    */
   </script>
 </body>
 </html>
