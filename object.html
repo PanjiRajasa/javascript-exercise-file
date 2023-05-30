@@ -16,6 +16,35 @@
     };
     console.log(products.name);
     console.log(products.price);
+
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '12 hour',
+      ['estimated-tax']: '10%',
+      rating: {
+        stars: '5 stars',
+        ['sold-out']: '111 package',
+        // nested object ☝☝
+        fungsi: function function1() {
+          console.log('nested function')
+        }
+        // nested function ☝☝☝
+      }
+    };
+    console.log(product2.name);
+    console.log(product2['delivery-time']);
+    console.log(product2['estimated-tax']);
+    console.log(product2.rating['sold-out'])//dot notation + square bracket notation 👈👈👈
+    console.log(product2.rating.stars)//dot notation + dot notation 👈👈👈
+    product2.rating.fungsi(); // aaccess the nested function 👈👈👈, becaues the value inside the fungsi property is function, so we type a bracket ()
+
+    // Bracket notation in js object:
+    // to put in the object: ['property-name']: property value
+    // to access that properties: object['property-name']
+
+    // Dot notation:
+    // to put in the object: property name: property value
+    // to access that properties: object.property name
   </script>
 </body>
 </html>
