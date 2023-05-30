@@ -12,6 +12,7 @@
   <button onclick="playGame('rock')">Rock</button>
   <button onclick="playGame('paper')">Paper</button>
   <button onclick="playGame('scissors')">Scissors</button>
+  <button onclick="scoreReset()">Reset Score</button>
   <script>
     let score = {
       wins: 0,
@@ -78,6 +79,14 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
       }
 
       return computerMove;
+    }
+
+    function scoreReset() {
+      score.losses = 0;
+      score.wins = 0;
+      score.ties = 0;
+      alert(`Your scores was reset. Your scores now
+Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
     }
   </script>
 </body>
