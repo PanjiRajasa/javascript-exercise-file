@@ -14,11 +14,7 @@
   <button onclick="playGame('scissors')">Scissors</button>
   <button onclick="scoreReset()">Reset Score</button>
   <script>
-    let score = {
-      wins: 0,
-      losses: 0,
-      ties: 0
-    };
+    let score =  JSON.parse(localStorage.getItem('score'))
 
     function playGame(playerMove) {
       const computerMove = pickComputerMove();
@@ -62,9 +58,12 @@
         score.ties += 1;
       }
 
+      localStorage.setItem('score', JSON.stringify(score))
+
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
     }
+
 
     function pickComputerMove() {
       const randomNumber = Math.random();
@@ -87,7 +86,14 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
       score.ties = 0;
       alert(`Your scores was reset. Your scores now
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}.`);
+      localStorage.removeItem('score')
     }
+    // note for myself:
+    // localStorage step:
+    //1. set the item use localStorage.setItem('name of this storage', JSON.stringify(object) or 'string value')
+    //2. now you can get the item from the storage use JSON.parse(localStorage.getItem('storage name'))
+    //3*. if you want to remove item from localStorage use localStorage.removeItem('storage name')
+
   </script>
 </body>
 </html>
