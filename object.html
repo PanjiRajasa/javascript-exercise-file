@@ -91,6 +91,19 @@
     //How to convert JSON object into javascript object back...
     const jsonString = JSON.stringify(product3);
     console.log(JSON.parse(jsonString));
+
+    const object1 = {
+      ['experiment-object1']: 'obj1',
+      ['experiment-object2']: 'obj2',
+      dotObj1: 'dotObj1',
+      dotObj2: 'dotObj2'
+    }
+    console.log(object1['experiment-object1']);
+    console.log(object1.dotObj1);
+
+    const object2 = {
+      message: 'test'
+    }
   </script>
 </body>
 </html>
