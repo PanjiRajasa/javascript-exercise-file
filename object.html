@@ -104,6 +104,88 @@
     const object2 = {
       message: 'test'
     }
+    // destructuring object/ takes one or more object properties out of the object👇👇👇
+    const object3 = {
+      message: 'test2',
+      alert1: 'OK!'
+    }
+    // the code bellow will take out the alert1 property from 'object3' 
+    const {message} = object3;
+    console.log(message);
+
+    // this code bellow works same as the  code above 👇👇👇
+    const alert1 = object3.alert1;
+    console.log(alert1);
+
+    // here the syntax 👇👇👇
+    // const { property1, property2, ... } = object;
+    // const 'variable with same name as object properties' = object.properties
+    //you can also destructuring the nested object 👇👇👇
+    const object4 = {
+        name: 'Panji',
+        address: {
+        city: 'Unknown',
+        region: 'Indonesia',
+        province: 'Bali'
+      }
+    };
+    const city = object4.address.city;
+    console.log(city);
+    const {name, address: {region, province}} = object4;
+    console.log(name);
+    console.log(region);
+    console.log(province);
+
+    // the destructure nested object can follow this syntax 👇👇👇
+    //const { property1, property2: { nestedProperty1, nestedProperty2 }, ... } = object;
+    //another example:
+    const person = {
+        nama: 'John',
+        age: 30,
+        address: {
+        street: '123 Main St',
+        kota: 'New York'
+      }
+    };
+
+    const {nama, age, address: {street,kota}} = person;
+    console.log(nama);    // Output: John
+    console.log(age);     // Output: 30
+    console.log(street);  // Output: 123 Main St
+    console.log(kota);    // Output: New York
+    
+    const sockss = {
+      product: 'socks',
+      detail: {
+        price: 7,
+        rating: 5,
+        tax: 10
+      }
+    }
+    const {product, detail: {price, rating, tax}} = sockss;
+    console.log(product);
+    console.log(price);
+    console.log(rating);
+    console.log(tax);
+
+    /*
+    The shorthand property notation is especially useful when you want to create an object using variables or when you have a lot of properties with corresponding variable names.
+
+    It's important to note that when using shorthand property notation, the variable name becomes the property name automatically. If the variable doesn't exist, an error will occur.
+
+    Shorthand property notation can make your code more concise and readable, especially in scenarios where you need to create objects with properties derived from variables.
+    */
+   const namaa = 'PPP';
+   const umur = 15;
+   const kotaa = 'Denpasar';
+   const object5 = {
+    namaa,
+    umur,
+    kotaa
+   }
+   console.log(object5.namaa);
+   console.log(object5.umur);
+   console.log(object5.kotaa);
   </script>
 </body>
 </html>
