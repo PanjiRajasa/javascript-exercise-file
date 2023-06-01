@@ -186,6 +186,32 @@
    console.log(object5.namaa);
    console.log(object5.umur);
    console.log(object5.kotaa);
+
+   /*
+    Shorthand method notation in JavaScript allows you to define object methods using a shorter syntax. Instead of defining a method using the function keyword, you can directly provide a function expression as the property value. This shorthand notation is particularly useful when creating object literals.
+   */
+
+   const calculator = {
+    add(a = 1,b = 1) {
+      console.log(a + b)
+    },
+    substract(a = 1,b = 1) {
+      console.log(a - b)
+    }
+   }
+   calculator.add(5,5);
+   calculator.substract(5,2);
+
+   const kalkulator = {
+    add2(a = 1,b = 1) {
+      return a + b
+    },
+    substract2(a = 1, b = 1) {
+      return a - b
+    }
+   }
+   console.log(kalkulator.add2(2,2));
+   console.log(kalkulator.substract2(3,1));
   </script>
 </body>
 </html>
