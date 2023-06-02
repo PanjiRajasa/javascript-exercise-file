@@ -1,0 +1,17 @@
+Document basically the same as ordinary objects in javascript. 
+Starting from the syntax to how to use it.
+The following is part of the document object :
+document {
+  body,
+  title,
+  head,
+  innerHTML,
+  etc (you can search other part in Google, because document object is have a lot of properties)
+}
+but you don't need to declare the document again, because it's already a built in JavaScript object just like console, JSON, localStorage, and Math
+Utility : To change the document structure, style, and content. 
+Example : 
+document.body.innerHTML = 'Hello';
+It will change the entire page into 'hello' string.
+More example in Google also YouTube.
+##By the way, I make this file for personal reference only.... 
