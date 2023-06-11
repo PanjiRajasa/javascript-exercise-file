@@ -28,6 +28,16 @@
   <p class="refresh-message"></p>
   <p class="js-total-cost"></p>
 
+  <button class="button-9a" onclick="buttonClick9a()" style="display: block;">9a</button>
+  <button class="button-9b" onclick="buttonClick9b()" style="display: block; margin-top: 10px;">9b</button>
+
+  <button class="heads-button" onclick="headTailsClick('heads')" style="margin-top: 10px;">Heads</button>
+  <button class="tails-button" onclick="headTailsClick('tails')">Tails</button>
+  <p class="playerChoose"></p>
+
+  <input class="name-input" placeholder="Name" onkeydown="nameKeyDown(event)">
+  <button onclick="submitButtonClick()">Submit</button>
+  <p class="name-message"></p>
   <script>
     function calculateTotal() {
       const inputElement = document.querySelector('.js-cost-input');
@@ -42,6 +52,12 @@
     function inputKeyDown(event) {
       if (event.key === 'Enter') {
         calculateTotal();
+      }
+    }
+
+    function nameKeyDown(event) {
+      if (event.key === 'Enter') {
+        submitButtonClick();
       }
     }
 
@@ -61,6 +77,27 @@
       } else {
         buttonElement.innerHTML = 'Subscribe';
       }
+    }
+
+    function buttonClick9a() {
+      const buttonElement = document.querySelector('.button-9a');
+      console.log(buttonElement);
+    }
+
+    function buttonClick9b() {
+      const buttonElement = document.querySelector('.button-9b');
+      buttonElement.innerHTML = '9b Done!'
+    }
+
+    function headTailsClick(choose) {
+      document.querySelector('.playerChoose').innerHTML = `You choose: ${choose}`
+    }
+
+    function submitButtonClick() {
+      const inputElement = document.querySelector('.name-input').value;
+      const paragraphElement =  document.querySelector('.name-message');
+      const message = inputElement;
+      paragraphElement.innerHTML = `Your name is: ${message}`;
     }
   </script>
 </body>
