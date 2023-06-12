@@ -15,7 +15,7 @@
       "> ✔✔✔✔✔</buton>
       <h2>Cart Quantity</h2>
       <button onclick="
-        alert(`Cart quantity: ${cartQuantity}`);
+        document.querySelector('.js-paragraph').innerHTML = `Cart quantity: ${cartQuantity}`;
       " class="cartbutton">Show Quantity</button>
       <button onclick="
         updateCartQuantity(1)
@@ -44,35 +44,37 @@
       <button onclick="
         decreaseCartQuantity(3)
     " class="cartbutton">Cart -3</button>
+
+      <p class="js-paragraph"></p>
       <script>
         let cartQuantity = 0;
         function updateCartQuantity(values) {
             if (cartQuantity + values > 10) {
-            alert('The cart is full');
+            document.querySelector('.js-paragraph').innerHTML = 'The cart is full';
             return;
           } else {
             cartQuantity += values;
-            console.log(`Cart quantity: ${cartQuantity}`);
+            document.querySelector('.js-paragraph').innerHTML = `Cart quantity: ${cartQuantity}`;
           }
         }
         
         function decreaseCartQuantity(values) {
           if (cartQuantity > 0) {
           cartQuantity -= values;
-          console.log(`Cart quantity was removed ${values}.`);
-          console.log(`Cart quantity: ${cartQuantity}`);
+          document.querySelector('.js-paragraph').innerHTML = `Cart quantity was removed ${values}.`;
+          document.querySelector('.js-paragraph').innerHTML = `Cart quantity: ${cartQuantity}`;
           return;
           }
           else {
             cartQuantity = 0;
-            alert(`Your cart is empty.`);
+            document.querySelector('.js-paragraph').innerHTML = `Your cart is empty.`;
           }
         }
 
         function resetCartQuantity() {
           cartQuantity = 0;
-          alert(`Cart was reset.`);
-          console.log(`Cart quantity: ${cartQuantity}`);
+          document.querySelector('.js-paragraph').innerHTML = `Cart was reset.`;
+          document.querySelector('.js-paragraph').innerHTML = `Cart quantity: ${cartQuantity}`;
         }
       </script>
 </body>
